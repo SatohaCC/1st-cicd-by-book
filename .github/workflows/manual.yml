@@ -18,5 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
         ACTOR: ${{github.actor}}
+        USERNAME: ${{vars.USERNAME}}
     steps:
       - run: echo "${{ env.ACTOR }}"
+      - run: echo "${{ env.USERNAME }}"
