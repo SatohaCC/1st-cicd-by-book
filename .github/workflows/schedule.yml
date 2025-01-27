@@ -14,4 +14,6 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - run: date
+      - run: |
+          echo "UTC時間: $(TZ=UTC date)"
+          echo "日本時間: $(TZ=Asia/Tokyo date)"
