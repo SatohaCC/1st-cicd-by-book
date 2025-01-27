@@ -14,4 +14,4 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "{{inputs.log-level}}"
+      - run: echo "&{{inputs.log-level}}"
