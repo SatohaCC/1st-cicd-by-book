@@ -1,5 +1,7 @@
 name: Manual
 
+env:
+    BRANCH: "env test" # 環境変数の追加
 on:
   workflow_dispatch:
     inputs:
@@ -15,4 +17,4 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ inputs.greeting }}"
+      - run: echo "${{ inputs.greeting }} ${{ env.BRANCH }}"
