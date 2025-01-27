@@ -1,4 +1,4 @@
-name: Manual Workflow
+name: Schedule
 
 on:
   schedule:
