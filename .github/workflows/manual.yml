@@ -16,5 +16,7 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
+    env:
+        ACTOR: ${{github.actor}}
     steps:
-      - run: echo "${{ inputs.greeting }} ${{ env.BRANCH }}"
+      - run: echo "${ ACTOR }"
