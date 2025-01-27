@@ -1,0 +1,17 @@
+name: Manual Workflow
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 毎日UTC 00:00 (日本時間 09:00)
+  workflow_dispatch:      # 手動実行も残しておく
+    inputs:
+      greeting:
+        description: 'Greeting to use'
+        required: true
+        default: 'hello'
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date
