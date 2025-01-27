@@ -1,0 +1,17 @@
+name: Choice
+
+on:
+  workflow_dispatch:
+    inputs:
+        log-level:
+            type: choice
+            options:
+                - info
+                - debug
+                - warn
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world"
