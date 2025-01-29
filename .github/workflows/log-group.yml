@@ -1,0 +1,11 @@
+name: Log Group
+on: push
+
+jobs:
+    log:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "::group::This is a log group"
+                printenv
+                echo "::endgroup::"
