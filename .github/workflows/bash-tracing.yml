@@ -1,0 +1,11 @@
+name: Bash Tracing
+on: push
+
+jobs:
+    log:
+        runs-on: ubuntu-latest
+        steps:
+            - run: | # Bashのトレースを有効にする 実行したコマンドをログに出力
+                set -x
+                date
+                hostname
